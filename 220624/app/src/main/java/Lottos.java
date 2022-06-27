@@ -27,7 +27,7 @@ public class Lottos {
 
     for (int i = 0; i < 6; i += 1) {
       for (int j = 1; j < 6; j += 1) {
-        if (lottos[i] == lottos[j]) {
+        if (lottos[i] == 0) {
           count += 1;
         }
       }

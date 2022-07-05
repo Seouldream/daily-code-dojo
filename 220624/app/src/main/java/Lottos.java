@@ -18,74 +18,81 @@ import java.util.List;
 public class Lottos {
 
   public int[] solution(int[] lottos, int[] win_nums) {
+    class Solution {
+      public int[] solution(int[] lottos, int[] win_nums) {
+        //배열의 길이
+        int count = 0;
+        int count2 = 0;
+        int MaxMatchNumber = 0;
+        int MinMatchNumber = 0;
 
-    //배열의 길이
-    int count = 0;
-    int count2 = 0;
-    int MaxMatchNumber = 0;
-    int MinMatchNumber = 0;
-
-    for (int i = 0; i < 6; i += 1) {
-      for (int j = 1; j < 6; j += 1) {
-        if (lottos[i] == 0) {
-          count += 1;
+        for (int i = 0; i < 6; i += 1) {
+          if (lottos[i] == 0) {
+            count += 1;
+          }
         }
-      }
-    }   // 카운트가 0이 중복되는 갯수
 
-    for(int i = 0; i < 6; i =+ 1) {
-      for(int j = 0; j < 6; j += 1) {
-        if(lottos[i] == lottos[j]) {
-          count2 += 1;
+
+        for (int z = 0; z < 6; z = +1) {
+          for (int y = 0; y < 6; y += 1) {
+            if (lottos[z] == win_nums[y]) {
+              count2 += 1;
+            }
+          }
+        } // 일치하는 갯수
+
+        MaxMatchNumber = count2 + count;
+        MinMatchNumber = count2; //일치 갯수는 곧 최저로 가장 맞을 갯수이다
+
+        int MaxRank = 0;
+
+        if (MaxMatchNumber == 0 || MaxMatchNumber == 1) {
+          MaxRank = 6;
         }
-      }
-    } // 일치하는 갯수
-
-      MaxMatchNumber = count2 + count;
-      MinMatchNumber = count2; //일치 갯수는 곧 최저로 가장 맞을 갯수이다
-
-      int MaxRank = 0;
-
-    if(MaxMatchNumber == 0 || MaxMatchNumber == 1) {
-      MaxRank = 6;
-    }
-    if(MaxMatchNumber == 2) {
-      MaxRank = 5;
-    }
-    if(MaxMatchNumber == 3) {
-      MaxRank = 4;
-    }
-    if(MaxMatchNumber == 4) {
-      MaxRank = 3;
-    }
-    if(MaxMatchNumber == 5) {
-      MaxRank = 2;
-    }
-    if(MaxMatchNumber == 6) {
-      MaxRank = 1;
-    }
+        if (MaxMatchNumber == 2) {
+          MaxRank = 5;
+        }
+        if (MaxMatchNumber == 3) {
+          MaxRank = 4;
+        }
+        if (MaxMatchNumber == 4) {
+          MaxRank = 3;
+        }
+        if (MaxMatchNumber == 5) {
+          MaxRank = 2;
+        }
+        if (MaxMatchNumber == 6) {
+          MaxRank = 1;
+        }
 
         int MinRank = 0;  // 미니멈 갯수가 0일때
-    if(MinMatchNumber == 0 || MinMatchNumber == 1) {
-      MinRank = 6;
-    }
-    if(MinMatchNumber == 2) {
-      MinRank = 5;
-    }
-    if(MinMatchNumber == 3) {
-      MinRank = 4;
-    }
-    if(MinMatchNumber == 4) {
-      MinRank = 3;
-    }
-    if(MinMatchNumber == 5) {
-      MinRank = 2;
-    }
-    if(MinMatchNumber == 6) {
-      MinRank = 1;
-    }
+        if (MinMatchNumber == 0 || MinMatchNumber == 1) {
+          MinRank = 6;
+        }
+        if (MinMatchNumber == 2) {
+          MinRank = 5;
+        }
+        if (MinMatchNumber == 3) {
+          MinRank = 4;
+        }
+        if (MinMatchNumber == 4) {
+          MinRank = 3;
+        }
+        if (MinMatchNumber == 5) {
+          MinRank = 2;
+        }
+        if (MinMatchNumber == 6) {
+          MinRank = 1;
+        }
+        int[] answer = {MaxRank, MinRank};
 
-    int[] answer = {MaxRank,MinRank};
+        return answer;
+      }
+
+
+
+
+
 
 
  /*   int[] answer = {};
@@ -100,6 +107,3 @@ public class Lottos {
     int Frequency0 = Collections.frequency(listConvertedlottos,0);
 
 */
-  }
-}
-

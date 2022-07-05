@@ -13,7 +13,7 @@ public class TotalDigitNumberSum {
     //스트링[0] + ... 스트링[lengthOfn -1] 까지 더하면 되는데  스트링은 말그대로 문자열임
     //Todo 변환한 자릿수 문자를 숫자 타입으로 치환해줘야함
     //int eachDigitNumber = Integer.parseInt(digitNumber[i]);
-    // -> 인티저파스인트메서드로 스트링변환됨을 확인
+    // -> 인티저파스인트메서드로 스트링변환됨을 확인222
 
     //i 값에 변함에 따라 나오는 다른 결과값을 뽑고 그것을 유실되지 않게 앤서라는 저장소에 저장해줌
     // + 동시에 이전 값을 더해줌

@@ -144,6 +144,7 @@ class SecretMapTest {
         temp = "1";
       }
 
+
       temporary += temp;
 
     }

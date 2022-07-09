@@ -5,6 +5,7 @@ import static java.lang.Integer.parseInt;
 // 어느하나라도 벽이면 벽 , 둘다 공백이면 공백
 // 벽 1  , 공백 0
 // 두 배열값 비교해주기 배열 1번의 캐릭터 1 이 ~와 같다면
+//일부 테스트 통과 불가 수정 필요
 
  public class SecretMap {
    private String temporary = "";

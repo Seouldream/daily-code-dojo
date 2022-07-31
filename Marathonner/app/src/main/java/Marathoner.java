@@ -18,25 +18,33 @@ import java.util.*;
 public class Marathoner {
   public String solution(String[] participant, String[] completion) {
     //if(sameName(participant))
+    String answer = "";
 
-    for(int i = 0; i < completion.length; i += 1 ) {
-      for(int z = 0; z < participant.length; z += 1) {
+    HashMap<String, Integer> map = new HashMap<>();
 
+    for(String player:participant) {
+      map.put(player,map.getOrDefault(player, 0) + 1);
+    }
+
+    for(String player : completion) {
+      map.put(player, map.get(player) - 1);
+    }
+
+    for(String key : map.keySet()) {
+      if ( map.get(key) > 0 ) {
+        answer = key;
       }
     }
 
-
-    String answer = "";
     return answer;
   }
 
 
   public boolean sameName(String[] participant) {
-    List<String> string = new ArrayList<>();
-    for (int i = 0; i < participant.length; i += 1) {
-      string.add(participant[i]);
+
+      for(int i = 0;i < participant.length; i += 1) {
       for (int j = 0; j < i; j += 1) {
-        if (string.get(i).equals(string.get(j))) {
+        if (participant[i].equals(participant[j])) {
           return true;
         }
       }

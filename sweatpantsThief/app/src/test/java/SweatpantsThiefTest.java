@@ -90,6 +90,8 @@ class SweatpantsThiefTest {
     assertEquals(8,sweatpantsThief.solution(9,new int[] {5,6,8,1,2},new int[] {2,3,1,4,8,9}));
     assertEquals(6,sweatpantsThief.solution(6,new int[] {2,4,5},new int[] {1,3,6}));
     assertEquals(5,sweatpantsThief.solution(5,new int[] {2,4,6},new int[] {1,3,5,7}));
+    assertEquals(8,sweatpantsThief.solution(10,new int[] {2,3,4,5,8,10},new int[] {1,3,6,9}));
+    assertEquals(5,sweatpantsThief.solution(5,new int[] {1,3},new int[] {2,4}));
   }
 // 1,2,5,6,8       1,2,3,4,8,9   ->8
   @Test

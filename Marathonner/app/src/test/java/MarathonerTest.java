@@ -9,6 +9,6 @@ class MarathonerTest {
   void booleanTest() {
     Marathoner marathoner = new Marathoner();
 
-  assertTrue(marathoner.sameName(new String[] {"이너","이누"}));
+  assertTrue(marathoner.sameName(new String[] {"아누","황","미스터킴","엘린","아누"}));
   }
 }

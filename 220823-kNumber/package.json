@@ -1,0 +1,22 @@
+{
+  "name": "220823-knumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix .",
+    "watch:test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/core": "^1.2.241",
+    "@swc/jest": "^0.2.22",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.3"
+  }
+}

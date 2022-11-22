@@ -25,4 +25,3 @@ public class RemoveParing {
     return stack.isEmpty() ?  1 :  0;
   }
 }
-

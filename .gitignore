@@ -27,4 +27,7 @@ hs_err_pid*
 
 # Ignore Gradle build output directory
 build
-node_modules
+
+# Package.json
+node_modules/
+

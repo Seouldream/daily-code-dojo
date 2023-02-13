@@ -19,3 +19,36 @@ function solution(x) {
   }
   return false;
 }
+
+function solution2(x) {
+  const stringX = `${x}`;
+
+  const digits = stringX.split('');
+
+  let sum = 0;
+
+  for (let i = 0; i < digits.length; i += 1) {
+    sum += parseInt(digits[i], 10);
+  }
+
+  if (x % sum === 0) {
+    return true;
+  }
+  return false;
+}
+
+function solution3(x) {
+  const stringX = `${x}`;
+
+  const digits = stringX.split('');
+
+  let sum = 0;
+
+  // eslint-disable-next-line no-return-assign
+  digits.map((element) => (sum += parseInt(element, 10)));
+
+  if (x % sum === 0) {
+    return true;
+  }
+  return false;
+}
